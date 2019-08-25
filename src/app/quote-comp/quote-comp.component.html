@@ -1,7 +1,7 @@
 
-<ul>
+
   <div *ngFor='let qu of manyQuotes;let i = index' class="quoteclass">
-      <li>{{qu.quote}}</li>
+      {{qu.quote}}
       <p>{{upvote}}</p>
       <p>{{downvote}}</p>
       <button (click)='toggleDetails(i)'>Toggle Details</button>
@@ -11,7 +11,7 @@
       <app-quote-detail-comp *ngIf='qu.showDescription' [qu]='qu'(isComplete) = 'completeQuote($event,i)'></app-quote-detail-comp>
     
     </div>
-  </ul>
+  
   <div class="col-md-6">
     <app-quote-form-comp (addQuote)="addNewQuote($event)"></app-quote-form-comp>
   </div>
