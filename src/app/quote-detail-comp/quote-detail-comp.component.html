@@ -3,7 +3,8 @@
     {{qu.authorName}}</li>
     <li>{{qu.firstName}}
     </li>
-    <!-- <li>{{qu.quote}}
-    </li> -->
+
+    <li>This goal will be complete in {{qu.completeDate|dateCount}} minutes
+    </li>
 </ul>
 <button (click)= 'quoteComplete(true)'>Delete</button>
