@@ -3,11 +3,11 @@
     background-image: url('http://getwallpapers.com/wallpaper/full/3/b/8/1071387-most-popular-desktop-backgrounds-with-quotes-1920x1080.jpg');
     
 } */
-.quoteclass{
+/* .quoteclass{
     
-    /* background:palevioletred;
+    background:palevioletred;
     display:flex;
-    flex-direction: column; */
-    float: left;
-    right:0px; 
-}
+    flex-direction: column;
+    float: right;
+    right:900px;
+} */
