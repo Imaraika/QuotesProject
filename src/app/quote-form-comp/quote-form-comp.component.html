@@ -1,32 +1,31 @@
 
 <div class="container-fluid">
-  <h2 class="text-center">Create a new quote</h2>
-  <hr>
-  <form (ngSubmit)='submitQuote()'#quoteForm='ngForm' >
-      <div class="form-group">
+    <!-- <div class="row"> -->
+        <h2 class="text-center">Create a new quote</h2>
+            <hr>
+        <form (ngSubmit)='submitQuote()'#quoteForm='ngForm' >
+            <div class="form-group">
+                <label for="Authorname">Author</label>
+                <input type="text" required class="form-control" [(ngModel)]="newQuote.authorName" name="authorName" id="name">
+            </div>
+            <div class="form-group">
 
-          <label for="Authorname">Author</label>
-          <input type="text" required class="form-control" [(ngModel)]="newQuote.authorName" name="authorName" id="name">
-       
+                <label for="name">Your Name</label>
+                <input type="text" required class="form-control" [(ngModel)]="newQuote.firstName" name="firstName"  id="yrname">
+            </div>
+            <div class="form-group">
 
-      </div>
-      <div class="form-group">
-
-          <label for="name">Your Name</label>
-          <input type="text" required class="form-control" [(ngModel)]="newQuote.firstName" name="firstName"  id="yrname">
-      
-      </div>
-      <div class="form-group">
-
-          <label for="firstName">Write quote</label>
-          <textarea class="form-control" id="description" [(ngModel)]="newQuote.quote" name="quote"rows="4" required></textarea>
+                <label for="firstName">Write quote</label>
+                <textarea class="form-control" id="description" [(ngModel)]="newQuote.quote" name="quote"rows="4" required></textarea>
           
-      </div>
-      <div class="form-group">
-          <label for="complete">Completion</label>
-          <input type='date' id="complete" required>
-      </div>
-  <div>
-    <button type="submit" class="btn btn-success">Add quote</button></div>
-  </form>
-</div>
+            </div>
+            <div class="form-group">
+                <label for="complete">Completion</label>
+                <input type='date' id="complete" required>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">Add quote</button>
+            </div>
+        </form>
+    </div>
+<!-- </div> -->

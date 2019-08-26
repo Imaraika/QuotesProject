@@ -1,11 +1,11 @@
-
- <div class="col-md-6" style="background:palevioletred;">
+<!-- <div class="row"> -->
+  <div class="col-md-6" style="background:palevioletred;">
     <app-quote-form-comp (addQuote)="addNewQuote($event)"></app-quote-form-comp>
   </div>
   <div class="quoteclas">
   <div *ngFor='let qu of manyQuotes;let i = index' class="col-md-6">
       <p appHighlight *ngIf="highestUpvote()===qu.upvotes && qu.upvotes>0">{{qu.quote}}</p>
-    <p  *ngIf="highestUpvote()!==qu.upvotes || qu.upvotes===0">{{qu.quote}}</p>
+      <p  *ngIf="highestUpvote()!==qu.upvotes || qu.upvotes===0">{{qu.quote}}</p>
       <!-- {{qu.quote}} -->
       <p>{{upvotes}}</p>
       <p>{{downvotes}}</p>
@@ -20,6 +20,6 @@
       <app-quote-detail-comp *ngIf='qu.showDescription' [qu]='qu'(isComplete) = 'completeQuote($event,i)'></app-quote-detail-comp>
     
     </div>
-    </div>
+    <!-- </div> -->
 
    
