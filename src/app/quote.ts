@@ -5,6 +5,7 @@ export class Quote {
    this.showDescription=false;
    this.upvotes=0;
    this.downvotes=0
+   this.completeDate = new Date();
 }
 
 }
