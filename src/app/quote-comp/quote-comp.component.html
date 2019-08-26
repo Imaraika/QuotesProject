@@ -1,6 +1,9 @@
 
-
-  <div *ngFor='let qu of manyQuotes;let i = index' class="quoteclass">
+ <div class="col-md-6" style="background:palevioletred;">
+    <app-quote-form-comp (addQuote)="addNewQuote($event)"></app-quote-form-comp>
+  </div>
+  <div class="quoteclas">
+  <div *ngFor='let qu of manyQuotes;let i = index' class="col-md-6">
       {{qu.quote}}
       <p>{{upvotes}}</p>
       <p>{{downvotes}}</p>
@@ -10,12 +13,9 @@
           <i class="up"></i>{{ qu.upvotes }}<img src="https://clipart.info/images/ccovers/1513313791facebook-circle-heart-love-png.png" height="35" width="35">
       </button> &nbsp; &nbsp;
 
-      <button (click)='downVoteQuote(i)'>{{ qu.downvotes }}<img src="https://icon-library.net/images/thumbs-down-icon-png/thumbs-down-icon-png-0.jpg" height="35"width="35"></button>
+      <button (click)='downVoteQuote(i)'>{{ qu.downvotes }}<img src="https://icon-library.net/images/thumbs-down-icon-png/thumbs-down-icon-png-0.jpg" height="35"width="35"></button><br><br>
    
       <app-quote-detail-comp *ngIf='qu.showDescription' [qu]='qu'(isComplete) = 'completeQuote($event,i)'></app-quote-detail-comp>
     
     </div>
-  
-  <div class="col-md-6">
-    <app-quote-form-comp (addQuote)="addNewQuote($event)"></app-quote-form-comp>
-  </div>
+    </div>
