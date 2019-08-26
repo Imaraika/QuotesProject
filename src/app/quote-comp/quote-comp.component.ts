@@ -8,6 +8,10 @@ import{Quote} from '../quote';
   styleUrls: ['./quote-comp.component.css']
 })
 export class QuoteCompComponent implements OnInit {
+  preNum:number;
+  lastNum:number;
+  counter:number;
+  
   toggleDetails(index){
     this.manyQuotes[index].showDescription = !this.manyQuotes[index].showDescription;
   }
@@ -33,6 +37,16 @@ export class QuoteCompComponent implements OnInit {
   downVoteQuote(index){
     this.manyQuotes[index].downvotes++;
 
+  }
+  highestUpvote(){
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.manyQuotes.length; this.counter++) {
+      this.lastNum = this.manyQuotes[this.counter].upvotes;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
   }
   constructor() { }
 
