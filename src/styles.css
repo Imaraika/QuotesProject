@@ -4,5 +4,10 @@
     
 } */
 .quoteclass{
-    background-image: url('https://www.road2psdrivingschool.com.au/wp-content/uploads/2015/01/the_road_ahead_1920x1200_best_twitter_backgrounds.jpg');
+    
+    /* background:palevioletred;
+    display:flex;
+    flex-direction: column; */
+    float: right;
+    right:0px; 
 }

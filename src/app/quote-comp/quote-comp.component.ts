@@ -17,25 +17,22 @@ export class QuoteCompComponent implements OnInit {
     }
   }
   manyQuotes:Quote[] =[
-    new Quote(1,'Chris Brady','Ange','No guts, no story',new Date(2019,3,14)),
-    new Quote(2,'Chris Brady','Ange','My life is my message',new Date(2019,3,14)),
-    new Quote(3,'Chris Brady','Ange','Screw it, let’s do it',new Date(2019,3,14)),
+    new Quote(1,'Chris Brady','Ange','No guts, no story',new Date(2019,3,14),0,0),
+    new Quote(2,'Chris Brady','Ange','My life is my message',new Date(2019,3,14),0,0),
+    new Quote(3,'Chris Brady','Ange','Screw it, let’s do it',new Date(2019,3,14),0,0),
   ];
   addNewQuote(quote){
-    let quoteLength = this.manyQuotes.length;
-    quote.id = quoteLength+1;
+    // let quoteLength = this.manyQuotes.length;
+    // quote.id = quoteLength+1;
      quote.completeDate = new Date(quote.completeDate)
     this.manyQuotes.push(quote)
   }
-  upvote = 0;
-  downvote = 0;
-
-  upVoteQuote(){
-   
-  this.upvote++ ; 
+  upVoteQuote(index){
+    this.manyQuotes[index].upvotes++; 
   }
-  downVoteQuote(){
-    this.downvote++;
+  downVoteQuote(index){
+    this.manyQuotes[index].downvotes++;
+
   }
   constructor() { }
 
